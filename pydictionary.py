@@ -29,5 +29,4 @@ print(master["list1"]["name"])
 invertdic = dict()
 for key in thisdict:
     invertdic.update({thisdict[key] : key })
-
 print(f'The inverted dic is : {invertdic}')
