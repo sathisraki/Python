@@ -54,9 +54,9 @@ print(a)
 
 b = re.findall("kan*",ex3)
 print(b)
-i = 0
 
 #Print the name that starts with letter M
+i = 0
 li = ["Murali","Mouli","Sri","Sathish","kannan"]
 for x in li:
     y = re.findall("^M",x)
