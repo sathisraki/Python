@@ -33,4 +33,49 @@ for ip in ipv4:
       print(f'{ip} is an invalid IP address')
   else:
     print(f'{ip} is an Invalid IP address')   
-  
+
+###
+exp = "This is the string to check regular expression"
+x = re.findall("^This", exp)
+print(f'The status of the regular expression is: {x}')
+
+
+ex = "helXo"
+y = re.findall("he..o",ex)
+print(y)
+
+ex2 = "moul"
+z = re.findall("i$",ex2)
+print(z)
+
+ex3 = "kannan"
+a = re.findall("^k", ex3)
+print(a)
+
+b = re.findall("kan*",ex3)
+print(b)
+i = 0
+
+#Print the name that starts with letter M
+li = ["Murali","Mouli","Sri","Sathish","kannan"]
+for x in li:
+    y = re.findall("^M",x)
+    if y:
+        if y[0]== "M" :
+          print(f'The Names start with M are: {li[i]}')
+        else:
+          print("No Match")
+    i+=1
+#Print the names that ends with the letter i
+i = 0
+#li = ["Murali","Mouli","Sri","Sathish","kannan"]
+for x in li:
+    y = re.findall("i$",x)
+    if y:
+        if y[0]== "i" :
+          print(f'The Names ends with are: {li[i]}')
+        else:
+          print("No Match")
+    i+=1
+
+
