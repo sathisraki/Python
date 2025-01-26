@@ -34,6 +34,28 @@ for ip in ipv4:
   else:
     print(f'{ip} is an Invalid IP address')   
 
+### Validating IP using other logic ###
+import re
+
+ipv4 = ["339.12.5.6","10.10.10.10","2345.4.5.6","03.4.5.345","5.5.5","xx.yy.aa.bb","03.04.06.04"]
+
+for ip in ipv4:
+  octdiv = ip.split(".")
+  op = 1
+  if len(octdiv) == 4:
+    for x in octdiv:
+      res = re.findall("^((2[0-4][0-9]|25[0-5])$|^1|0\d\d$|^\d\d$|^\d$)",x)
+      if res:
+        temp = 0
+      else:
+        op = 0
+  else:
+    op = 0
+  if op:
+    print(f'The IP {ip} is valid')
+  else:
+    print(f'This is invalid IP format {ip}')
+    
 ###
 exp = "This is the string to check regular expression"
 x = re.findall("^This", exp)
