@@ -78,4 +78,42 @@ for x in li:
           print("No Match")
     i+=1
 
+## Write a regular expression script to match the MAC address:
+import re
+
+mac1 = "11:22:33:dd:gf:ff"
+
+print(mac1[2])
+maclist = mac1.split(":")
+print(maclist)
+lom = len(maclist)
+print(lom)
+res = 0
+if lom < 6 | lom > 6:
+ print("Not a valid mac")
+else:
+ print("Valid MAC count")
+ for mac in maclist:
+   if len(mac) == 2:
+     x = re.findall("\d\d|^[a-f]\d|^\d[a-f]|^[a-f][a-f]",mac)
+     if x:
+       res = 0
+     else:
+       res = 1
+   else:
+     print("Not a valid MAC due to Octect lenght")
+     res = 1
+ 
+if res == 0:
+  print("The given MAC address is valid")
+else:
+  print("The given MAC is invalid")
+  
+
+mac2 = "aa-bb-dd-GA-22-44" 
+res = re.findall("^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$",mac2)
+if res:
+  print(f'The valid MAC is {res}')
+else:
+  print("Invalid MAC2")
 
