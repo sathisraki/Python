@@ -152,3 +152,11 @@ if res:
 else:
   print("Invalid MAC2")
 
+#### Validate an email id using re.match #####
+import re
+email = "xyz_abc.kan@exp.in"
+x = re.match("^[a-z0-9_\.]+@[a-z0-9]+\.[0-9a-z]+$", email)
+if x:
+  print(f'{email} is Valid Email id')
+else:
+  print(f'{email} is Invalid email id')
