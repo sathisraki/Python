@@ -94,3 +94,56 @@ itinerary = ["ind","sa","aus"]
 itinerary.clear()
 print(f'clear() method will empty list : {itinerary}')
                                                           
+#Search the number and depth using the Binary search.
+numlist = [20,343,23,10,45,12,60]
+print(numlist.sort())
+
+print("Enter the number you want to search")
+search = input()
+start = 0
+notfound = 1
+depth = 0
+end = (len(numlist))
+while notfound:
+    mid=int((start + end)/2)
+    if numlist[mid] == (int(search)):
+        print(f'The number {search} is at {mid}')
+        notfound = 0
+    elif numlist[mid] < int(search):
+        start = mid + 1
+    else:
+        end = mid - 1
+    depth+=1
+print(f'The Depth of the number is {depth}')
+## Sum the positive number from the list
+print("enter the list of number")
+numlist = input()
+numdup=numlist.split(",")
+total=0
+### CM logic
+for i in range(0,len(numdup)):
+    if int(numdup[i]) > 0:
+        total=total + int(numdup[i])
+print(f'The sum of all integer numbers is {total}')
+
+##SK Logic
+total =0   
+for x in numdup:
+  if int(x) > 0:
+    total = total + int(x)
+
+print(f'The sum of all integer numbers is {total}')
+
+
+## Validation of Palindrome
+def palindrome(s):
+    s1 = s[::-1]
+    if s == s[::-1]:
+        print(s1)
+        return True
+    else:    
+        print(s1)
+        return False
+print("Enter the String:")
+name=input()
+print(palindrome(name))  
