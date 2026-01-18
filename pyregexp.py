@@ -1,3 +1,13 @@
+#findall
+import re
+
+txt = "Congrazt Sathish..Best wishes Sathish"
+x = re.findall("Sathish", txt)
+print(x)
+
+Output:
+The Matching string will be printed in list, empty list will be returned if there is not match string.
+
 #Python script to validate the IPv4 address using regular expression.
 import re
 
