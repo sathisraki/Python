@@ -1,12 +1,37 @@
-#findall
+#findall()
 import re
-
 txt = "Congrazt Sathish..Best wishes Sathish"
 x = re.findall("Sathish", txt)
 print(x)
 
 Output:
 The Matching string will be printed in list, empty list will be returned if there is not match string.
+
+#Search()
+import re
+txt = "Congrazt Sathish..Best wishes Sathish"
+x = re.search("Sathish", txt)
+print(x.start(),x.end())
+
+Output
+The search() function searches the string for a match, and returns a Match object if there is a match.
+If there is more than one match, only the first occurrence of the match will be returned.
+If no matching is found, none will be returned.
+
+## sub()
+import re
+txt = "Congrazt Sathish..Best wishes Sathish"
+x = re.sub("Sathish", "Kannan",txt)
+print(x)
+
+Output: Sathish at both places will be replaced with kannan
+
+import re
+txt = "Congrazt Sathish..Best wishes Sathish"
+x = re.sub("Sathish", "Kannan",txt,1)
+print(x)
+
+Output: only the 1st Sathish will be replaced with kannan
 
 #Python script to validate the IPv4 address using regular expression.
 import re
