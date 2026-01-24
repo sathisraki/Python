@@ -25,6 +25,18 @@ x = re.sub("Sathish", "Kannan",txt)
 print(x)
 
 Output: Sathish at both places will be replaced with kannan
+===
+import re
+txt = "Congrazt Sathish..Best wishes Sathish"
+x = re.split("Sathish",txt)
+print(x)
+
+if "Sathish" in txt:
+    print("yes")
+===
+
+## split()
+
 
 import re
 txt = "Congrazt Sathish..Best wishes Sathish"
